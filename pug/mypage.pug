@@ -3,42 +3,43 @@ head
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
     link(rel="stylesheet", href="css/main.css")
     title MyPage
+    link(rel='icon', type='image/ico', href='/images/others/icon.jpeg')
 body
-    nav.navbar.navbar-expand-md.navbar-dark.bg-fade.fixed-top
+    nav.navbar.navbar-expand-md.navbar-dark.bg-fade.fixed-top(itemscope)
         button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation")
             span.navbar-toggler-icon
         div#navbarsExampleDefault.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
                 li.nav-item.active
-                    a.nav-link(href="#") Home
+                    a.nav-link(itemprop= "Home" href="#") Home
                         span.sr-only(current)
                 li.nav-item
-                    a.nav-link(href="#") News
+                    a.nav-link(itemprop= "News" href="#") News
                 li.nav-item
-                    a.nav-link(href="#") Contact
+                    a.nav-link(itemprop= "Contact" href="#") Contact
                 li.nav-item
-                    a.nav-link(href="#") About
+                    a.nav-link(itemprop= "About" href="#") About
 
-    div.jumbotron.jumbotron-fluid
+    div.jumbotron.jumbotron-fluid(itemscope)
         div#demo.carousel.slide(data-ride='carousel')
             ul.carousel-indicators
-                li.active(data-target='#demo', data-slide-to='0')
-                li(data-target='#demo', data-slide-to='1')
-                li(data-target='#demo', data-slide-to='2')
+                li.active(itemprop= "slide1" data-target='#demo', data-slide-to='0')
+                li(itemprop= "slide2" data-target='#demo', data-slide-to='1')
+                li(itemprop= "slide3" data-target='#demo', data-slide-to='2')
             .carousel-inner
                 .carousel-item.active
-                    img(src='/images/others/10.jpg', alt='Los Angeles')
-                    .carousel-caption
+                    img(itemprop= "image1" src='/images/others/1.jpeg', alt='Los Angeles')
+                    .carousel-caption(itemprop= "caption1")
                         h3 Los Angeles
                         p We had such a great time in LA!
                 .carousel-item
-                    img(src='/images/others/9.jpg', alt='Chicago')
-                    .carousel-caption
+                    img(itemprop= "image2" src='/images/others/2.jpeg', alt='Chicago')
+                    .carousel-caption(itemprop= "caption2")
                         h3 Chicago
                         p Thank you, Chicago!
                 .carousel-item
-                    img(src='/images/others/5.jpg', alt='New York')
-                    .carousel-caption
+                    img(itemprop= "image3" src='/images/others/12.jpeg', alt='New York')
+                    .carousel-caption(itemprop= "caption3")
                         h3 New York
                         p We love the Big Apple!
             a.carousel-control-prev(href='#demo', data-slide='prev')
@@ -48,42 +49,42 @@ body
     section.module.parallax.parallax-1(data-type="background" data-speed="10")
         div.parallax-container
             h1 Motion
-    section.module.content
+    section.module.content(itemscope)
         div.parallax-container
-            h2 Lorem Ipsum Dolor
-            p Lorem ipsum dolor...
+            h2(itemprop= "heading") Lorem Ipsum Dolor
+            p(itemprop= "content") Lorem ipsum dolor...
 
-    div.bs-example
+    div.bs-example(itemscope)
         div#accordionExample.accordion
             div.card
                 div#headingOne.card-header
                     h2.mb-0
-                        button#btnCollapse(class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne") What is HTML?
+                        button#btnCollapse.btn.btn-link(itemprop= "heading1" type="button" data-toggle="collapse" data-target="#collapseOne") What is HTML?
                             //i(class="fa fa-plus") What is HTML?
 
                 div#collapseOne.collapse.show(aria-labelledby="headingOne" data-parent="#accordionExample")
                     div.card-body
-                        p HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages.
+                        p(itemprop= "content1") HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages.
 
             div.card
                 div#headingTwo.card-header
                     h2.mb-0
-                        button#btnCollapse.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo") What is Bootstrap?
+                        button#btnCollapse.btn.btn-link.collapsed(itemprop= "heading2" type="button" data-toggle="collapse" data-target="#collapseTwo") What is Bootstrap?
                             //i(class="fa fa-plus") What is Bootstrap?
 
                 div#collapseTwo.collapse(aria-labelledby="headingTwo" data-parent="#accordionExample")
                     div.card-body
-                        p Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+                        p(itemprop= "content2") Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
 
             div.card
                 div#headingThree.card-header
                     h2.mb-0
-                        button#btnCollapse.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseThree") What is CSS?
+                        button#btnCollapse.btn.btn-link.collapsed(itemprop= "heading3" type="button" data-toggle="collapse" data-target="#collapseThree") What is CSS?
                             //i(class="fa fa-plus") What is CSS?
 
                 div#collapseThree.collapse(aria-labelledby="headingThree" data-parent="#accordionExample")
                     div.card-body
-                        p CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc.
+                        p(itemprop= "content3") CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc.
 
     .mymodel
         h2 Centered Modal Example
