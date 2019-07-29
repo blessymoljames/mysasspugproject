@@ -15,8 +15,6 @@ body {
   padding-top: 0px; }
 
 .navbar-scroll {
-  background-color: rgba(0, 123, 255, 0.4);
-  transition: background-color 0.5s;
   width: 100%; }
 
 @media (max-width: 768px) {
